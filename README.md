@@ -44,7 +44,7 @@ $$
 we set 
 
 $$
-\Theta=\frac{1}{1 - \theta^2}\begin{bmatrix}
+\Theta^{-1}=\frac{1}{1 - \theta^2}\begin{bmatrix}
 1 & -\theta \\ 
 -\theta & 1
 \end{bmatrix}.
