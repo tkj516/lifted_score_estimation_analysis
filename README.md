@@ -16,6 +16,10 @@ $$
 
 where $\Sigma = \sigma$.  Both the population and empirical versions of this objective are plotted below. 
 
+<p align="center">
+  <img src="gaussian.png" alt="LSE optimization lanscape for 1D Gaussian example." width="400"/>
+</p>
+
 
 Notice that the curvature of the DSM landscape is larger, while the LSE landscape appears sharper. As a result, after sign correction and with a good initialization, LSE might converge more quickly to the global minimum. However, due to the sharpness of the landscape, selecting an appropriate learning rate is crucial to prevent overshooting the minima. In this context, lifting helps to stabilize the solution, effectively resolving the minima in the underlying landscape.
 
@@ -39,15 +43,19 @@ for some $\rho \in (-1,1)$. Since
 we set 
 
 ```math
-\Theta=\frac{1}{1-\theta^2}\begin{bmatrix}1 & -\th \\ -\th & 1\end{bmatrix}.
+\Theta=\frac{1}{1-\theta^2}\begin{bmatrix}1 & -\theta \\ -\theta & 1\end{bmatrix}.
 ```
 
 Then, the LSE loss function becomes
 
 ```math
-    \mathcal{L}_{2D}(\theta) \triangleq \frac{1}{2} \Biggl(\frac{2}{(1-\theta^2)^2}(1-2\theta\rho+\theta^2)\Biggr)^2 - \Biggl(\frac{2}{1-\theta^2}\Biggr)^2.
+    \mathcal{L}_{2D}(\theta) \triangleq \frac{1}{2} \left(\frac{2}{(1-\theta^2)^2}(1-2\theta\rho+\theta^2)\right)^2 - \left(\frac{2}{1-\theta^2}\right)^2.
 ```
 
 Note that the global optimizer is $\theta^\star=\rho$. Again, we plot both the population and empirical version of this objective below.  
+
+<p align="center">
+  <img src="complicated_gaussian.png" alt="LSE optimization lanscape for 2D Gaussian example." width="400"/>
+</p>
 
 Lifting still induces a landscape with sharp curvature that could aid in accelerating convergence and resolving the solution.
