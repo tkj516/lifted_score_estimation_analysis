@@ -25,32 +25,36 @@ Notice that the curvature of the DSM landscape is larger, while the LSE landscap
 
 The example can be made slightly more challenging by considering the two dimensional setting. We consider 
 
-```math
+$$
 \Sigma=\begin{bmatrix}
 1 & \rho \\ 
 \rho & 1
 \end{bmatrix}
-```
+$$
 
 for some $\rho \in (-1,1)$. Since 
 
-```math
-\Sigma^{-1}=\frac{1}{1-\rho^2}\begin{bmatrix}
+$$
+\Sigma^{-1}=\frac{1}{1 - \rho^2}\begin{bmatrix}
 1 & -\rho \\ 
 -\rho & 1
 \end{bmatrix},
-```
+$$
+
 we set 
 
-```math
-\Theta=\frac{1}{1-\theta^2}\begin{bmatrix}1 & -\theta \\ -\theta & 1\end{bmatrix}.
-```
+$$
+\Theta=\frac{1}{1 - \theta^2}\begin{bmatrix}
+1 & -\theta \\ 
+-\theta & 1
+\end{bmatrix}.
+$$
 
 Then, the LSE loss function becomes
 
-```math
+$$
     \mathcal{L}_{2D}(\theta) \triangleq \frac{1}{2} \left(\frac{2}{(1-\theta^2)^2}(1-2\theta\rho+\theta^2)\right)^2 - \left(\frac{2}{1-\theta^2}\right)^2.
-```
+$$
 
 Note that the global optimizer is $\theta^\star=\rho$. Again, we plot both the population and empirical version of this objective below.  
 
